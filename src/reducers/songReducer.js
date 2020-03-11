@@ -5,6 +5,11 @@ export default (state = {songs: [], loading:false}, action) => {
                 ...state, 
                 loading: true
             }
+        case "ADD_SONG":
+            return {
+                ...state, 
+                songs: [...state, action.payload]
+            }
         default:
             return state 
     }     
