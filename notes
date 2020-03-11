@@ -1,0 +1,19 @@
+Logic for getting songs 
+
+componentDidMount() {
+
+    if artist 
+      entity = "musicArtist"
+      else
+    let song = "musicTrack"
+
+    //search artist 
+    // search song
+    // hold musicArtist/Track in name on form
+    term = input
+      fetch('https://itunes.apple.com/search?term=kanye+west&entity=musicArtist')
+      .then(response => response.json())
+      .then(song => console.log(song)) 
+    }
+
+    
