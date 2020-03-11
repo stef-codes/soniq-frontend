@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux;'
+import {combineReducers} from 'redux'
 import  songReducer from './songReducer'
 
 const rootReducer = combineReducers({
