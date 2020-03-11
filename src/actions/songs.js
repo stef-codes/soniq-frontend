@@ -4,16 +4,20 @@ export const getSongs = () => {
     }
 }
 
-// let artist = "musicArtist"
-// let song = "musicTrack"
-
-// export function fetchSongs() {
-//     return (dispatch) => {
-//       dispatch({ type: 'START_SEARCH_SONGS_REQUEST' });
-//       fetch('https://itunes.apple.com/search?term=kanye+west&entity=musicArtist')
-//         .then(response => response.json())
-//         .then(music => console.log(music))
-//     }
-// }
-            
-            // dispatch({ type: 'ADD_ASTRONAUTS', astronauts }));
+export const addSong = song => {
+    return dispatch => {
+        dispatch({type: "ADD_SONG"})
+        return fetch(`http://localhost:3001/search`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accepts': 'application/json'
+            },
+            body: JSON.stringify(song)
+        })
+        .then(resp => resp.json())
+        .then(data => {
+            dispatch({type: "ADD_SONG", payload: data})
+        })
+    }
+}
