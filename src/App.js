@@ -5,6 +5,7 @@ import {getSongs} from './actions/songs'
 import HomePage from './components/HomePage/HomePage';
 import Playlists from './components/Playlists/Playlists';
 import Search from './components/Search'
+import Songs from './components/Songs/Songs';
 
 
   class App extends React.Component  {
@@ -16,6 +17,7 @@ import Search from './components/Search'
           <Route exact path={"/"} component={HomePage} />
           <Route exact path={"/playlists"} component={Playlists} />
           <Route exact path={"/search"} component={Search} />
+          <Route exact path={"/songs"} component={Songs} />
         </Router>
       </div>
       )
