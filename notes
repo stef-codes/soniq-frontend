@@ -16,6 +16,6 @@ componentDidMount() {
       .then(song => console.log(song)) 
     }
 
-
+kind = "song"
 maxLength required - in form input?
 Create an error page for routes that aren't found?
