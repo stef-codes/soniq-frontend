@@ -7,8 +7,8 @@ class Search extends React.Component {
         musicTrack: "",
         musicArtist: "", 
         searchResults: [],
-        resultCount: 0,
-        showResults: false
+        showResults: false, 
+        addToPlaylist:false
     }
 
     handleChange = e => {
@@ -60,11 +60,13 @@ class Search extends React.Component {
                 </form>
                <br></br>
 
-               
+               {/* Should be a component? */}
                <div>
                    {searchResults.map(result =>
-                    <div key={result.trackId}>
-                        {result.trackId} {result.trackName} <button>Add to Playlist</button>                   
+                    <div>
+                        <a id={result.trackId} href="#"> 
+                        {result.trackName}</a> 
+                        <button id={result.trackId} onClick={console.log(result.trackName)}>Add to Playlist</button>                   
                     </div>
 
                    )}
