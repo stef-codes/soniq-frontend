@@ -39,20 +39,27 @@ class Search extends React.Component {
 
 
     render () {
+
+        //if show_results true then const result_list = map through songs and make objects 
         return (
             <div>
                 <h1>Search for a Song to Add to a Playlist</h1>
                 <form onSubmit={this.handleSubmit} >
                     <h3>Search by Artist Name</h3>
-                    <input type="text" name="musicArtist" value={this.state.musicArtist} onChange={this.handleChange} placeholder="Kendrick Lamar" />
+                    <input type="text" name="musicArtist" value={this.state.musicArtist} onChange={this.handleChange} placeholder="Cher" />
                     <br/><br/>
                     <button type="submit">Search</button> 
                     <h3>Search by Song Name</h3>
                     <input type="text" name="musicTrack" value={this.state.musicTrack} onChange={this.handleChange} placeholder="Backseat Freestyle" />
                     <button type="submit">Search</button> 
                 </form>
+                // if show results is true render result list click and take to a show page to add it to playlist
+
+
             </div>
         )
+
+
     }
 }
     
