@@ -6,7 +6,8 @@ import {addSong} from '../actions/songs'
 class Search extends React.Component {
     state = {
         musicTrack: "",
-        musicArtist: ""
+        musicArtist: "", 
+        showResults: false
     }
 
     handleChange = e => {
@@ -25,11 +26,15 @@ class Search extends React.Component {
         .then(response => response.json())
         .then(song => console.log(song)) 
 
-        
         this.setState({
             musicTrack: "",
-            musicArtist: ""
+            musicArtist: "", 
+            showResults: true
         })
+
+        
+
+
     }
 
 
