@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux'
 import  songReducer from './songReducer'
+import  playlistReducer from './playlistReducer'
 
 const rootReducer = combineReducers({
-    songReducer
+    songReducer, 
+    playlistReducer
 })
 
 export default rootReducer
