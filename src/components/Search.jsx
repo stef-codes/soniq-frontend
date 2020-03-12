@@ -1,12 +1,13 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import {addSong} from '../actions/songs'
+
 // import '../search.styles.css'
 
 class Search extends React.Component {
     state = {
         musicTrack: "",
         musicArtist: "", 
+        searchResults: [],
+        resultCount: 0,
         showResults: false
     }
 
@@ -24,23 +25,27 @@ class Search extends React.Component {
         console.log(e.target)
         fetch(`https://itunes.apple.com/search?term=${search_value}&entity=${e.target.name}`)
         .then(response => response.json())
-        .then(song => console.log(song)) 
-
-        this.setState({
-            musicTrack: "",
-            musicArtist: "", 
-            showResults: true
+        .then(songs => {
+            debugger
+            console.log(songs.results)
+            this.setState({
+                searchResults: songs.results
+            })
         })
 
-        
-
-
+        this.setState({
+            showResults: true
+        })
     }
 
+    
 
     render () {
 
         //if show_results true then const result_list = map through songs and make objects 
+        // if (this.state.showResults) 
+             const {searchResults} = this.state; 
+        
         return (
             <div>
                 <h1>Search for a Song to Add to a Playlist</h1>
@@ -53,14 +58,29 @@ class Search extends React.Component {
                     <input type="text" name="musicTrack" value={this.state.musicTrack} onChange={this.handleChange} placeholder="Backseat Freestyle" />
                     <button type="submit">Search</button> 
                 </form>
-                // if show results is true render result list click and take to a show page to add it to playlist
+               <br></br>
 
+               
+               <div>
+                   {searchResults.map(result =>
+                    <div key={result.trackId}>
+                        {result.trackId} {result.trackName} <button>Add to Playlist</button>                   
+                    </div>
+
+                   )}
+               </div>
+
+                {/* <div>
+                    {searchResults.map((result, i) => 
+                    <div key={result.trackId || i}> {result.trackName}
+                    </div>)}
+                </div> */}
 
             </div>
         )
+    }      
 
-
-    }
+    
 }
     
-export default connect (null, {addSong}) (Search)
+export default Search
