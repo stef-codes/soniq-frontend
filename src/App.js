@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {getSongs} from './actions/songs'
 import HomePage from './components/HomePage/HomePage';
 import Playlists from './components/Playlists/Playlists';
+import PlaylistView from './components/Playlists/PlaylistView';
 import Search from './components/Search'
 import Songs from './components/Songs/Songs';
 
@@ -16,6 +17,7 @@ import Songs from './components/Songs/Songs';
         <Router>
           <Route exact path={"/"} component={HomePage} />
           <Route exact path={"/playlists"} component={Playlists} />
+          <Route exact path={"/playlists/:id"} component={PlaylistView} />
           <Route exact path={"/search"} component={Search} />
           <Route exact path={"/songs"} component={Songs} />
         </Router>
