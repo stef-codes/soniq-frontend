@@ -51,9 +51,6 @@ class Search extends React.Component {
         })
 
     }
-
-    
-
     render () {
 
         //if show_results true then const result_list = map through songs and make objects 
@@ -73,12 +70,13 @@ class Search extends React.Component {
                <br></br>
 
                {/* Should be a component? */}
+        
                <div>
                    {searchResults.map(result =>
                     <div>
                         <a id={result.trackId} href="#"> 
                         {result.trackName}</a> 
-                        <button id={result.trackId} onClick={() => this.handleClick(result.trackId)}>Add</button>                   
+                        <button id={result.trackId} onClick={this.props.handleOnClick}>Add</button>                   
                     </div>
                    )}
                </div>
