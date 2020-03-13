@@ -3,13 +3,25 @@ import React from 'react'
 import {getPlaylists} from '../../actions/playlist'
 import PlaylistForm from './PlaylistForm'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 class Playlists extends React.Component {
     componentDidMount(){
         this.props.getPlaylists()
     }
     render() {
-        const playlists = this.props.playlists.map((playlist, i) => <li key={i}>{playlist.name}</li>
+        const playlists = this.props.playlists.map((playlist, i) => 
+            <div>
+            <br/>
+            <li key={i}>{playlist.name}</li>
+            <Link to="/search">
+                <button type="button">
+                    Add a Song
+                </button>
+            </Link>
+            {/* <button>Add Song to Playlist</button> */}
+            <br/>
+            </div>
         )
         return(
             <div>
