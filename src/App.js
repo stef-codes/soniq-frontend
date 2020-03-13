@@ -5,7 +5,7 @@ import {getSongs} from './actions/songs'
 import HomePage from './components/HomePage/HomePage';
 import Playlists from './components/Playlists/Playlists';
 import PlaylistView from './components/Playlists/PlaylistView';
-import Search from './components/Search'
+import Search from './containers/Search'
 import Songs from './components/Songs/Songs';
 
 
