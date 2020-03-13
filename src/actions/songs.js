@@ -7,7 +7,7 @@ export const getSongs = () => {
 export const addSong = song => {
     return dispatch => {
         dispatch({type: "ADD_SONG"})
-        return fetch(`http://localhost:3001/search`, {
+        return fetch(`http://localhost:3001/songs`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
