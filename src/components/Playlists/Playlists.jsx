@@ -16,6 +16,7 @@ class Playlists extends React.Component {
                 <h2>Your playlists</h2>
                 <ul>{this.props.loading ? <h3>...loading playlists</h3> : playlists} </ul>
                 <PlaylistForm/>
+        
             </div>
         )
     }
