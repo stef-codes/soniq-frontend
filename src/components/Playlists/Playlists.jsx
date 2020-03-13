@@ -10,16 +10,17 @@ class Playlists extends React.Component {
         this.props.getPlaylists()
     }
     render() {
-        const playlists = this.props.playlists.map((playlist, i) => 
+        const playlists = this.props.playlists.map((playlist) => 
             <div>
             <br/>
-            <li key={i}>{playlist.name}</li>
-            <Link to="/search">
-                <button type="button">
-                    Add a Song
-                </button>
+            <Link 
+                to={{
+                    pathname: `/playlists/${playlist.id}`,
+                    state: {playlist}
+                    }}
+            >
+                {playlist.name}     
             </Link>
-            {/* <button>Add Song to Playlist</button> */}
             <br/>
             </div>
         )
