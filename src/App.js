@@ -27,7 +27,7 @@ import Songs from './components/Songs/Songs';
 
 
 const mapStateToProps = state => {
-  console.log("I am state", state)
+  console.log("Page Loaded", state)
   return {
     songs: state.songReducer.songs, 
     loading: state.songReducer.loading
