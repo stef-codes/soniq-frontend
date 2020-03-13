@@ -1,7 +1,7 @@
 import React from 'react'
 // import '../playlists.styles.css'
 import {getPlaylists} from '../../actions/playlist'
-import PlaylistForm from './PlaylistForm'
+import PlaylistForm from '../../containers/Playlist/PlaylistForm'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
