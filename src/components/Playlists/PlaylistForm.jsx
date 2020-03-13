@@ -22,6 +22,7 @@ class PlaylistForm extends React.Component {
         e.preventDefault()
         console.log(this.state)
         this.props.addPlaylist(this.state)
+        
   
 
         this.setState({
