@@ -52,10 +52,9 @@ class Search extends React.Component {
                 <form onSubmit={this.handleSubmit} >
                     <h3>Search by Artist Name</h3>
                     <input type="text" name="musicArtist" value={this.state.musicArtist} onChange={this.handleChange} placeholder="Cher" />
-                    <br/><br/>
                     <button type="submit">Search</button> 
                     <h3>Search by Song Name</h3>
-                    <input type="text" name="musicTrack" value={this.state.musicTrack} onChange={this.handleChange} placeholder="Backseat Freestyle" />
+                    <input type="text" name="musicTrack" value={this.state.musicTrack} onChange={this.handleChange} placeholder="Thriller" />
                     <button type="submit">Search</button> 
                 </form>
                <br></br>
