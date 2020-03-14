@@ -1,5 +1,5 @@
 import React from 'react'
-import Search from '../../containers/Search'
+import Search from '../../containers/search/Search'
  // import '../playlistview.styles.css'
 import { connect } from 'react-redux'
 import {addSong} from '../../actions/songs'
@@ -19,14 +19,14 @@ class PlaylistView extends React.Component {
             console.log(e.target.id)
             console.log(this.props.match.params.id)
 
-            this.props.addSong({
-                song_id: e.target.id
-            })
+            // this.props.addSong({
+            //     song_id: e.target.id
+            // })
 
-            this.props.addPlaylistSong({
-                playlist_id: this.props.match.params.id, 
-                song_id: e.target.id
-            })
+            // this.props.addPlaylistSong({
+            //     playlist_id: this.props.match.params.id, 
+            //     song_id: e.target.id
+            // })
         }
 
 
