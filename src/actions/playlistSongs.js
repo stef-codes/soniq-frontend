@@ -1,7 +1,7 @@
 export const addPlaylistSong = playlistSong => {
-    return async dispatch => {
+    return dispatch => {
         dispatch({type: "ADD_PLAYLIST_SONG"})
-        const resp = await fetch(`http://localhost:3001/playlist_songs`, {
+        return fetch(`http://localhost:3001/playlist_songs`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -9,7 +9,9 @@ export const addPlaylistSong = playlistSong => {
             },
             body: JSON.stringify(playlistSong)
         })
-        const data = await resp.json()
-        dispatch({ type: "ADD_PLAYLIST_SONG", payload: data })
+        .then(resp => resp.json())
+        .then(data => {
+            dispatch({type: "PLAYLIST_SONG_ADDED", payload: data})
+        })
     }
 }
