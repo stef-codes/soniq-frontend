@@ -1,5 +1,4 @@
 import React from 'react'
-import SearchResults from './searchResults'
 // import '../search.styles.css'
 
 class Search extends React.Component {
@@ -70,16 +69,16 @@ class Search extends React.Component {
                <br></br>
 
 
-               <SearchResults results={searchResults} />
+        
                {/* Should be a component? */}
-               {/* <div>
+               <div>
                    {searchResults.map(result =>
                     <div data-id={result.trackId}>
                         <a id={result.trackId} href="#">{result.trackName}</a> 
                         <button id={result.trackId} onClick={this.props.handleOnClick}>Add</button>                   
                     </div>
-                //    )}
-               </div> */}
+                    )}
+               </div>
             </div>
         )
     }      
