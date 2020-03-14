@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage';
 import Playlists from './components/Playlists/Playlists';
 import PlaylistView from './components/Playlists/PlaylistView';
-import Search from './containers/Search'
+import Search from './containers/search/Search'
 import Songs from './components/Songs/Songs';
-import SearchContainer from './containers/SearchContainer'
+import SearchContainer from './containers/search/SearchContainer'
 
 
   class App extends React.Component  {
