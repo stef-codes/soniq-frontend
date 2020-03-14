@@ -22,7 +22,7 @@ export const addPlaylist = playlist => {
         })
         .then(resp => resp.json())
         .then(data => {
-            dispatch({type: "ADD_PLAYLIST", payload: data})
+            dispatch({type: "PLAYLIST_ADDED", payload: data})
         })
     }
 }
