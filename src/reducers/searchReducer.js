@@ -8,7 +8,7 @@ export default (state = {searchResults: [], loading:false}, action) => {
         case "SEARCH_SUCCESS":
             return {
                 ...state, 
-                songs: [...state, action.payload]
+                searchResults: [...state, action.payload]
             }
         default:
             return state 
