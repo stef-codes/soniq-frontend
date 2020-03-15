@@ -74,6 +74,7 @@ class Search extends React.Component {
                <div>
                    {searchResults.map(result =>
                     <div data-id={result.trackId}>
+                        
                         <a id={result.trackId} href="#">{result.trackName}</a> 
                         <button id={result.trackId} onClick={this.props.handleOnClick}>Add</button>                   
                     </div>
