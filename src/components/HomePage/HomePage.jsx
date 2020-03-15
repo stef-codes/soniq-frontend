@@ -1,9 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 // import '../homepage.styles.css'
 
 const HomePage = () => {
     return (
-    <h1>Welcome to Soniq</h1>
+    <div>
+        <h1>Welcome to Soniq</h1>
+        <Link to="/playlists"><button>See Playlists</button></Link>
+    </div>
     )
 }
     
