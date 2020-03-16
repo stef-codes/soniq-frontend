@@ -5,7 +5,12 @@ export default (state = {searchResults: [], loading:false}, action) => {
                 ...state, 
                 loading: true
             }
-        case "SEARCH_SUCCESS":
+        case "SONG_SEARCH_SUCCESS":
+            return {
+                ...state, 
+                searchResults: [...state, action.payload]
+            }
+        case "ARTIST_SEARCH_SUCCESS":
             return {
                 ...state, 
                 searchResults: [...state, action.payload]
