@@ -26,6 +26,7 @@ class Search extends React.Component {
         console.log(e.target)
         fetch(`https://itunes.apple.com/search?term=${search_value}&entity=${e.target.name}`)
         .then(response => response.json())
+
         .then(songs => {
             // debugger
             // console.log(songs.results)
