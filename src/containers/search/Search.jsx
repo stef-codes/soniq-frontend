@@ -46,9 +46,9 @@ class Search extends React.Component {
             id: "",
             trackId: id,
             showResults: true
-
         })
-
+    this.props.addSong(songObj)
+    this.props.addTheSongToPlaylist(songObj)
     }
     render () {
 
@@ -72,12 +72,13 @@ class Search extends React.Component {
 
         
                {/* Should be a component? */}
+        
                <div>
                    {searchResults.map(result =>
                     <div data-id={result.trackId}>
                         
                         <a id={result.trackId} href="#">{result.trackName}</a> 
-                        <button id={result.trackId} onClick={this.props.handleOnClick}>Add</button>                   
+                        <button id={result.trackId} onClick={this.handleClick}>Add</button>                   
                     </div>
                     )}
                </div>
