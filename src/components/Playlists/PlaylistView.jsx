@@ -19,6 +19,7 @@ class PlaylistView extends React.Component {
             console.log(e.target.id)
             console.log(this.props.match.params.id)
 
+
             // this.props.addSong({
             //     song_id: e.target.id
             // })
@@ -55,7 +56,7 @@ class PlaylistView extends React.Component {
 
 
                 <h3>Add a Song to this Playlist</h3>
-                <Search handleOnClick={this.addSongToPlaylist}/>
+                <Search addTheSongToPlaylist={this.addSongToPlaylist}/>
 
             </div>
          )
